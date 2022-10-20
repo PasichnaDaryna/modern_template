@@ -1,0 +1,1426 @@
+/* @use "../abstracts"; */
+
+/* to apply this design add additional class to the page title, for example:  
+ <div  class="question-number">#5</div> Deckkraft Untergründ */
+
+
+ /* disable the |Enable editing of user inputs on result page| setting in the result page tab 
+ 
+  set Number of product columns to 3*/
+
+  body, button, input, select, textarea {
+    font-family: "Roboto", sans-serif !important;
+    font-size: 18px !important;
+}
+
+/* hide icon in the title */
+#foxbase-selector .app-page-header__icon {
+  display: none !important; 
+}
+
+
+/* This design is to apply when you would like to have all the buttons/cards/checkboxes rounded */
+
+
+/* navigation title */
+#foxbase-selector .app-questionnaire-navigation-item--active .app-questionnaire-navigation-item__title::before {
+  content: "" !important;
+  display: block !important;
+  background-size: 30px !important;
+  background-repeat: no-repeat !important;
+  width: 30px !important;
+  height: 30px !important;
+  position: absolute !important;
+  top: calc(50% - 15px) !important;
+  left: 0px !important;
+}
+#foxbase-selector .app-questionnaire-navigation-item {
+  padding-left: 40px !important;
+  padding-right: 10px !important;
+}
+#foxbase-selector .app-questionnaire-navigation-item .app-questionnaire-navigation-item__title {
+  /* text-transform: uppercase !important; */
+  font-weight: bold !important;
+  display: flex !important;
+  gap: 0.3rem !important;
+  /* justify-content: flex-end !important; */
+}
+#foxbase-selector .app-questionnaire-navigation-item .app-questionnaire-navigation-item__answer {
+  text-transform: none !important;
+  color: #b2b2be !important
+  
+}
+
+
+/*navigation arrow*/
+#foxbase-selector .app-questionnaire-navigation-item--active .app-questionnaire-navigation-item__title::before {
+  content: "" !important;
+  display: block !important;
+  background-image: url(https://cdn.foxbase.de/f/Selector/Dokumentation/Icon_Pfeil.svg) !important;
+  background-size: 30px !important;
+  background-repeat: no-repeat !important;
+  width: 30px !important;
+  height: 30px !important;
+  position: absolute !important;
+  top: 0px !important;
+  left: 0px !important;
+}
+/*navigation to the right for space for arrow*/
+#foxbase-selector .app-questionnaire-navigation-item {
+  padding-left: 40px !important;
+}
+
+
+
+#foxbase-selector {
+
+font-family:  "Roboto", sans-serif !important;
+  }
+
+#foxbase-selector .mdc-typography--headline6,
+#foxbase-selector .mdc-typography--headline5,
+#foxbase-selector .mdc-button,
+#foxbase-selector .sel-card__title,
+#foxbase-selector .app-questionnaire-navigation-item,
+#foxbase-selector .app-questionnaire-navigation-item__answers,
+#foxbase-selector .sel-product-no-result p,
+#foxbase-selector .mdc-typography--body1,
+#foxbase-selector .sel-question__header,
+#foxbase-selector body,
+#foxbase-selector .mdc-typography--subtitle1,
+#foxbase-selector .mdc-typography--subtitle2,
+#foxbase-selector div,
+#foxbase-selector span,
+#foxbase-selector .sel-product__list-section ul li,
+#foxbase-selector .sel-product__list-expand-section a,
+#foxbase-selector .sel-product__list-expand-section-header,
+#foxbase-selector .mdc-floating-label,
+#foxbase-selector .mdc-text-field__input,
+#foxbase-selector .mdc-select__native-control,
+#foxbase-selector option,
+#foxbase-selector .sel-image-button .app-grid-tile__title,
+#foxbase-selector .mdc-button:not(:disabled) {
+  
+  font-size: 1rem !important;
+  line-height: 1.5 !important;
+  font-family:  "Roboto", sans-serif !important;
+  font-weight: bold !important; 
+  
+}
+#foxbase-selector button.mdc-button {
+  border-radius: 24px !important;
+  min-height: 48px !important;
+  padding: 10px !important;
+  font-size: 1rem !important;
+  font-weight: bold !important;
+  line-height: 1 !important;
+}
+
+@media (max-width: 768px) {
+  #foxbase-selector .mdc-layout-grid__cell {
+    grid-column-end: span 9 !important;
+  }
+}
+  /* question number in the header   */
+  #foxbase-selector .sel-page-header .app-page-header-container .mdc-typography--headline5 .question-number {
+  
+  font-weight: 700 !important;
+  font-size: 28px !important;
+  text-transform: uppercase !important;
+  padding-bottom: 10px !important;
+  color: #575760 !Important;
+}
+
+#foxbase-selector .sel-page-header .app-page-header-container .mdc-typography--headline5 {
+  display: flex !important;
+  flex-direction: row !important;
+  gap: 0.5rem !important;
+  font-style: bold !important;
+  font-weight: 700 !important;
+  font-size: 28px !important;
+  /* text-transform: uppercase !important; */
+  padding-bottom: 10px !important;
+  color: #00438b !Important; 
+}
+
+#foxbase-selector .sel-page-header .sel-question__header {
+  display: flex !important;
+  gap: 0.8rem !important;
+  align-items: center !important;
+}
+#foxbase-selector .sel-page-header .sel-question__header .remark {
+  max-height: 36px !important;
+  flex-shrink: 0 !important;
+}
+#foxbase-selector .sel-question {
+  position: relative !important;
+}
+#foxbase-selector .sel-question:not(:last-child) {
+  margin-bottom: 3rem !important;
+}
+#foxbase-selector info-area {
+  display: block !important;
+  margin-bottom: 2rem !important;
+}
+#foxbase-selector questionnaire-navigation.mdc-layout-grid__cell {
+  display: none !important;
+  position: relative !important;
+  justify-self: flex-end !important;
+  padding-left: 3rem !important;
+}
+@media (min-width: 768px) {
+  #foxbase-selector questionnaire-navigation.mdc-layout-grid__cell {
+    display: block !important;
+    grid-column: 10/span 3 !important;
+    width: 100% !important;
+  }
+}
+
+
+/* Back Next buttons  */
+/* To prepare the styling like this, please add arrows '➜
+' to next button label and back button label in the settings */
+
+
+#foxbase-selector button#app-back-button, #foxbase-selector button#app-next-button {
+  background-color: transparent !important;
+  border: 2px solid #0a6dbc !important;
+  border-radius: 24px !important;
+  box-shadow: none !important;
+  color: #0a6dbc !important;
+  font-size: 30px !important;
+}
+
+#foxbase-selector button#app-back-button {
+  -moz-transform: scaleX(-1) !important;
+  -o-transform: scaleX(-1) !IMPORTANT;
+  -webkit-transform: scaleX(-1) !important;
+  transform: scaleX(-1) !important;
+}
+
+
+#foxbase-selector img.star {
+  max-height: 25px !important;
+}
+#foxbase-selector img.filter {
+  max-height: 35px !important;
+}
+
+/* ---------------------------PROGRESS BAR TOP ---------------- */
+
+
+
+/* sets where the page header should start and end horizontally*/
+@media (min-width: 840px){
+  #foxbase-selector header.sel-page-header.mdc-layout-grid__cell.mdc-layout-grid__cell--span-8-tablet.mdc-layout-grid__cell--span-12-desktop {
+  grid-column-start: 1 !important;
+  grid-column-end: span 12 !important;
+}}
+
+
+/* changes the order of elements in the header */
+#foxbase-selector header.sel-page-header.mdc-layout-grid__cell.mdc-layout-grid__cell--span-8-tablet.mdc-layout-grid__cell--span-12-desktop {
+  display: inline-flex !important;
+  flex-direction: column-reverse !important;
+  margin-top: -8px !important;
+}
+
+
+/* setting the width, height and bg color */
+#foxbase-selector .app-questionnaire-progress-bar__background {
+  position: relative !important;
+  width: 100% !important;
+  background-color: #e0e0e0 !important;
+  height: 10px !important;
+}
+
+/* resets padding and margin for the selector */
+
+@media (min-width: 840px) {
+  #foxbase-selector .mdc-layout-grid {
+  box-sizing: border-box !important;
+  margin: 0 auto !important;
+  padding: 0px !important;
+ 
+}
+}
+
+
+
+/* progress bar on mobile */
+@media (max-width: 839px) {
+    #foxbase-selector .app-questionnaire-progress-bar {
+        width: calc(100% + 48px) !important;
+        position: relative !important;
+    }
+}
+
+
+/* ----------------------------------progress bar on the result page------------------------------------------------------- */
+/*On Result page: Switch position of page title and progress bar and hide page subtitle*/
+
+
+/* The heading */
+
+  #foxbase-selector  result-page p.mdc-typography--headline5 {
+       color:#00438b !important; 
+       font-size: 32px !important;
+  font-style: bold !important;
+  line-height: 40px !important;
+  letter-spacing: 0em !important;
+  }
+  
+
+@media (min-width: 840px) {
+   /* changes the order of elements in the header */
+#foxbase-selector header.sel-page-header.mdc-layout-grid__cell.mdc-layout-grid__cell--span-8-tablet.mdc-layout-grid__cell--span-12-desktop {
+  display: inline-flex !important;
+  flex-direction: column-reverse !important;
+  margin-top: -10px !important;
+}
+
+
+  #foxbase-selector result-page .sel-navigation.ng-scope.sel-navigation--progress-bar {
+      display: inline-grid !important;
+      width: 100% !important;
+      grid-template-columns: repeat(12, 1fr) !important;
+  }
+  #foxbase-selector result-page questionnaire-progress-bar.sel-navigation__progress-bar {
+      grid-row-start: 1 !important;
+      grid-column: 1/span 12 !important;
+  }
+
+
+
+
+  #foxbase-selector result-page span.sel-navigation__primary p.mdc-typography--headline5 {
+      grid-row-start: 2 !important;
+      grid-column: 1/span 9 !important;
+      margin-top: 30px !important;
+     
+  }
+  #foxbase-selector result-page button.sel-navigation__button.mdc-button.mdc-button--raised {
+      grid-row-start: 2 !important;
+      grid-column: 10/span 3 !important;
+      margin-top: 30px !important;
+      margin-left: 30px !important;
+  }
+}
+@media (min-width: 480px) and (max-width: 839px) {
+  #foxbase-selector result-page .sel-navigation.ng-scope.sel-navigation--progress-bar {
+      display: inline-grid !important;
+      width: 100% !important;
+      grid-template-columns: repeat(8, 1fr) !important;
+  }
+  #foxbase-selector result-page questionnaire-progress-bar.sel-navigation__progress-bar {
+      grid-row-start: 1 !important;
+      grid-column: 1/span 8 !important;
+  }
+  #foxbase-selector result-page span.sel-navigation__primary.mdc-typography--headline5 {
+      grid-row-start: 2 !important;
+      grid-column: 1/span 6 !important;
+      margin-top: 30px !important;
+  }
+  #foxbase-selector result-page button.sel-navigation__button.mdc-button.mdc-button--raised {
+      grid-row-start: 2 !important;
+      grid-column: 7/span 2 !important;
+      margin-top: 30px !important;
+      margin-left: 24px !important;
+      min-width: 120px !important;
+  }
+  #foxbase-selector result-page .app-result {
+      grid-column-start: 1 !important;
+  }
+}
+
+#foxbase-selector result-page .sel-navigation--progress-bar .sel-navigation__progress-bar {
+  width: 100% !important;
+  margin-top: 0 !important;
+}
+@media (min-width: 0px) and (max-width: 479px) {
+  #foxbase-selector result-page .sel-navigation.ng-scope.sel-navigation--progress-bar {
+      display: inline-grid !important;
+      width: 100% !important;
+      grid-template-columns: repeat(4, 1fr) !important;
+  }
+  #foxbase-selector result-page questionnaire-progress-bar.sel-navigation__progress-bar {
+      grid-row-start: 1 !important;
+      grid-column: 1/span 4 !important;
+  }
+  #foxbase-selector result-page span.sel-navigation__primary.mdc-typography--headline5 {
+      grid-row-start: 2 !important;
+      grid-column: 1/span 4 !important;
+      margin-top: 30px !important;
+      text-align: left !important;
+  }
+  #foxbase-selector result-page button.sel-navigation__button.mdc-button.mdc-button--raised {
+      grid-row-start: 3 !important;
+      grid-column: 1/span 2 !important;
+      margin-top: 30px !important;
+      margin-left: 0px !important;
+  }
+}
+
+
+@media (max-width: 839px) {
+#foxbase-selector .app-questionnaire-progress-bar__background {
+  position: relative !important;
+  width: 100% !important;
+  /* background-color: #e0e0e0 !important; */
+  height: 10px !important;
+}
+}
+
+/* progress bar on mobile */
+@media (max-width: 839px) {
+  #foxbase-selector .app-questionnaire-progress-bar {
+      width: calc(100% + 48px) !important;
+      position: relative !important;
+  }
+}
+@media (max-width: 839px) {
+  result-page .sel-navigation--progress-bar .sel-navigation__progress-bar {
+      width: calc(100% + 48px) !important;
+      position: relative !important;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 479px) {
+  #foxbase-selector .mdc-layout-grid__cell {
+      width: 100% !important;
+  }
+}
+
+
+
+/* progress bar on tablet */
+@media (min-width: 480px) and (max-width: 839px) {
+  #foxbase-selector .app-questionnaire-progress-bar {
+      width: calc(100% + 48px) !important;
+      position: relative !important;
+  }
+}
+
+/* progress bar */
+
+@media (min-width: 480px) and (max-width: 839px) {
+  #foxbase-selector .app-questionnaire-progress-bar__background {
+      width: 100% !important;
+      /* position: relative !important;
+      grid-column-end: 11 !important; */
+  }
+}
+
+
+/* Hide navigation on the result page */
+
+
+#foxbase-selector result-page questionnaire-navigation.mdc-layout-grid__cell {
+  display: none !important; 
+}
+
+
+
+
+/* ----------------------------Progress BAR with GRADIENT------------ */
+#foxbase-selector .app-questionnaire-progress-bar__background {
+  height: 10px !important;
+  /* width: 100% !important; */
+}
+
+
+#foxbase-selector .app-questionnaire-progress-bar__progress {
+  background: linear-gradient(270deg, #003e52 0%, #0a6afcdc 100%) !important;
+  height: 10px !important;
+  /* width: 100% !important; */
+}
+
+
+/* sets where the page header should start and end horizontally*/
+@media (min-width: 840px){
+  #foxbase-selector header.sel-page-header.mdc-layout-grid__cell.mdc-layout-grid__cell--span-8-tablet.mdc-layout-grid__cell--span-12-desktop {
+  grid-column-start: 1 !important;
+  grid-column-end: span 12 !important;
+}}
+
+
+/* changes the order of elements in the header */
+#foxbase-selector header.sel-page-header.mdc-layout-grid__cell.mdc-layout-grid__cell--span-8-tablet.mdc-layout-grid__cell--span-12-desktop {
+  display: inline-flex !important;
+  flex-direction: column-reverse !important;
+  margin-top: -10px !important;
+}
+
+
+/* setting the width, height and bg color */
+#foxbase-selector .app-questionnaire-progress-bar__background {
+  position: relative !important;
+  width: 100% !important;
+  /* background-color: #e0e0e0 !important; */
+  height: 10px !important;
+}
+
+/* resets padding and margin for the selector */
+
+@media (min-width: 840px) {
+  #foxbase-selector .mdc-layout-grid {
+  box-sizing: border-box !important;
+  margin: 0 auto !important;
+  padding: 0px !important;
+ 
+}
+}
+
+
+
+
+/*______________________ slider________________________________  */
+
+#foxbase-selector .sel-question-type-slider,
+#foxbase-selector    .sel-question-type-slider {
+  margin-bottom: 4rem !important;
+}
+#foxbase-selector   .sel-question-type-slider .sel-slider,
+#foxbase-selector    .sel-question-type-slider .sel-slider {
+  height: 80px !important;
+}
+#foxbase-selector .sel-question-type-slider .sel-slider .mdc-slider__track-container {
+  height: 24px !important;
+  background-color: transparent;
+  background: linear-gradient(to right, #0a6dbc  8px, #D3D3D3 0%) !important;
+  border-radius: 15px !important;
+}
+
+#foxbase-selector .sel-question-type-slider .sel-slider .mdc-slider__track-container .mdc-slider__track {
+  height: 24px !important;
+  background-color: #0a6dbc !important;
+  left: 8px !important;
+}
+#foxbase-selector .sel-question-type-slider .sel-slider .mdc-slider__track-container .mdc-slider__track-marker-container .mdc-slider__track-marker::after, #foxbase-selector   .sel-question-type-slider .sel-slider .mdc-slider__track-container .mdc-slider__track-marker-container::after,
+#foxbase-selector .sel-question-type-slider .sel-slider .mdc-slider__track-container .mdc-slider__track-marker-container .mdc-slider__track-marker::after,
+#foxbase-selector .sel-question-type-slider .sel-slider .mdc-slider__track-container .mdc-slider__track-marker-container::after {
+  display: none !important;
+}
+#foxbase-selector .sel-question-type-slider .sel-slider .mdc-slider__thumb-container {
+  background-color: #00438b !important;
+  border-radius: 15px !important;
+  height: 70% !important;
+  top: 20px !important;
+  left: 0 !important;
+}
+
+#foxbase-selector .sel-question-type-slider .sel-slider .mdc-slider__thumb-container .mdc-slider__thumb {
+  display: none !important;
+}
+#foxbase-selector .sel-question-type-slider .sel-slider .sel-slider__label-container {
+  margin-top: 1rem !important;
+}
+#foxbase-selector .sel-question-type-slider .sel-slider .sel-slider__label-container .sel-slider__label {
+  color: #000000 !important;
+  font-size: 1.25rem !important;
+  line-height: 1.2 !important;
+  margin-bottom: 1.5rem !important;
+  font-weight: normal !important;
+}
+
+
+
+#foxbase-selector .mdc-slider:not(.mdc-slider--disabled) .mdc-slider__focus-ring {
+  background-color: transparent !important;
+}
+
+
+
+/* --------------------------Cards---------------------- */
+
+
+#foxbase-selector .sel-card {
+  border-radius: 24px !important; 
+}
+
+#foxbase-selector .sel-question--with-navigation .sel-card {
+    margin-right: 24px !important;
+    margin-bottom: 24px !important;
+    border-radius: 24px !important; 
+}
+
+
+@media (max-width: 839px) {
+    #foxbase-selector .sel-question--with-navigation .sel-card {
+        margin-right: 10px !important;
+    }
+     
+}
+
+/* adjust image in cards */
+#foxbase-selector .sel-card__image {
+  width: 100% !important;
+  border-radius: 50% !important; 
+  
+}
+
+#foxbase-selector .sel-card__title {
+    color: #0a6dbc !important;
+}
+
+
+/* no standard hover effect in cards */
+
+#foxbase-selector .sel-card--activated:not(:disabled),
+#foxbase-selector .sel-card--activated:not(:disabled):hover {
+background-color: transparent !important;
+}
+
+#foxbase-selector .mdc-typography--headline6 {
+  color: #00438b !important;
+  font-size: 1.25rem !important;
+  line-height: 1.5 !important;
+}
+
+
+#foxbase-selector .sel-card__title {
+  padding: 8px 8px !important;
+  color: #00438b !important;
+  font-size: 1.25rem !important;
+  line-height: 1.5 !important;
+}
+
+
+/* --------------------------------Cards hover------------------------------------------------ */
+
+/* cards background and padding (plus white border to avoid jumping when hovering) */
+#foxbase-selector .mdc-card__primary-action:last-child,
+#foxbase-selector .mdc-card__primary-action {
+  background: #ffffff !important;
+  border: 2px solid #ffffff !important;
+  padding: 25px !important;
+  color: #00438b !important; 
+}
+/* hover and active on cards */
+#foxbase-selector .mdc-card__primary-action:last-child:hover,
+#foxbase-selector .mdc-card__primary-action:last-child:active {
+  /* background: linear-gradient(270deg, #003e52 0%, #0a6afcdc 100%) !important; */
+  border-image-slice: 1 !important;
+  border: 2px solid #00438b !important;
+  color: #00438b !important;
+   
+  
+}
+
+
+
+
+#foxbase-selector .mdc-card__primary-action:last-child:hover .sel-card__title,
+#foxbase-selector .mdc-card__primary-action:last-child:active .sel-card__title {
+  color: #00438b !important;
+}
+
+/* _______________________________Checkboxes______________________ */
+
+/*---Checkboxes without image---*/
+
+/*hide checkbox image spacing*/
+#foxbase-selector .mdc-grid-tile__primary-content {
+  display: none !important;
+}
+#foxbase-selector .mdc-grid-tile__primary {
+  padding-bottom: 0 !important;
+}
+#foxbase-selector .sel-grid-list--checkboxes .sel-checkbox {
+  position: absolute !important;
+  top: 5px !important;
+  right: 0 !important;
+  overflow: visible !important;
+}
+
+/*hide checkmark triangle*/
+#foxbase-selector .sel-grid-list--checkboxes .sel-checkbox__background-triangle {
+  border-width: 0 !important;
+}
+
+/*push checkmark to the front*/
+#foxbase-selector .sel-grid-list--checkboxes .sel-grid-tile__primary {
+  z-index: 1 !important;
+}
+
+/*Checkmark*/
+#foxbase-selector .sel-grid-list--checkboxes .sel-checkbox__native-control ~ .sel-checkbox__background .sel-checkbox__checkmark i {
+  font-size: 30px !important;
+  line-height: 0.5em !important;
+  display: flex !important;
+  justify-content: center !important;
+  padding-right: 20px !important;
+}
+
+/*being able to click on the checkmark area*/
+#foxbase-selector questionnaire-page .mdc-checkbox__native-control {
+  display: none !important;
+}
+
+
+/*changing the title of the checkbox */
+#foxbase-selector .sel-image-button .app-grid-tile__secondary {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 8px !important;
+  border-radius: 30px !important; 
+}
+
+/*---checkbox title desktop/mobile---*/
+@media (min-width: 480px) and (max-width: 839px) {
+  #foxbase-selector .sel-image-button .app-grid-tile__title {
+      font-size: 14px !important;
+      word-break: break-word !important;
+      -webkit-hyphens: auto !important;
+      -moz-hyphens: auto !important;
+      hyphens: auto !important;
+  }
+}
+@media (max-width: 479px) {
+  #foxbase-selector .sel-grid-list--checkboxes .sel-checkbox {
+      position: absolute !important;
+      top: 12px !important;
+      right: 0 !important;
+      overflow: visible !important;
+  }
+}
+
+
+
+
+
+#foxbase-selector .sel-top__section-name-share-button .mdc-button,
+
+#foxbase-selector .sel-top__section-name-cta-api-button .mdc-button {
+border-radius: 24px !important;
+background-color: #ffffff !important;
+color: #004982 !important;
+border: 1px solid #004982 !important;
+
+}
+
+
+
+
+/* --------------------------------------CHECKBOXES with images------------------------------- */
+
+  /*hide checkbox image spacing*/
+#foxbase-selector #foxbase-9 .mdc-grid-tile__primary-content {
+  display: block !important;
+}
+
+  /*---------------------------------------- Checkboxes in questionnaire----------------------------------*/
+/* ---------------------------------different backgrounds, icons and "fake" button ----------------------- */
+/*To prepare the styling specifically for the page 9, add the page id #foxbase-9 after  #foxbase-selector*/
+@media (min-width: 840px){
+  #foxbase-selector #foxbase-9 .sel-question--with-navigation .sel-image-button--divisible-by-three {
+  width: calc(30% - 24px) !important;
+  height: 100% !important;
+   padding: 21px !important;
+  }
+}
+
+
+
+
+#foxbase-selector #foxbase-9 .sel-grid-list--checkboxes .sel-image-button .app-grid-tile__title {
+  margin-bottom: 60px !important;
+  display: none !important; 
+  
+}
+#foxbase-selector #foxbase-9 .sel-grid-list--checkboxes .sel-image-button .mdc-typography--subtitle2 {
+  margin-bottom: 130px !important;
+}
+#foxbase-selector #foxbase-9 .sel-image-button .app-grid-tile__secondary {
+  padding: 0px !important;
+}
+#foxbase-selector #foxbase-9 .sel-grid-list--checkboxes .sel-image-button .app-grid-tile__secondary {
+  background-color: transparent !important;
+  color: #0a6dbc !important;
+  font-size: 15px !important;
+  line-height: 21px !important;
+  margin-bottom: 120px !important; 
+}
+@media (max-width: 839px) {
+    #foxbase-selector #foxbase-9 .sel-grid-list--checkboxes .sel-image-button .app-grid-tile__secondary {
+        margin-bottom: 20px !important; 
+    }
+
+}
+
+
+
+
+/* icon in checkbox image as a sprite image for selected and not selected status */
+#foxbase-selector #foxbase-9 .mdc-grid-tile__primary-content {
+  object-fit: cover !important;
+  object-position: 0 0 !important;
+  width: 50px !important;
+  height: 50px !important;
+  margin-right: auto !important;
+    margin-left: auto !important;
+  /*outline: none !important;*/
+}
+#foxbase-selector #foxbase-9 .sel-image-button--selected .mdc-grid-tile__primary-content {
+  object-fit: cover !important;
+  object-position: 100% 0 !important;
+  margin-right: auto !important;
+    margin-left: auto !important;
+  /*outline: none !important;*/
+}
+
+/* hide checkmark and checkmark corner */
+#foxbase-selector #foxbase-9 .sel-grid-list--checkboxes .sel-checkbox {
+  display: none !important;
+}
+
+/* additional select button in checkbox */
+#foxbase-selector #foxbase-9 .sel-grid-list--checkboxes .mdc-typography--subtitle2::after {
+  content: "okay";
+  background-color: #0a6dbc !important;
+  padding: 10px 20px !important;
+  border: 1px solid #0a6dbc !important;
+  color: #fff !important;
+  position: absolute !important;
+  border-radius: 6px !important; 
+  
+  /*left: 10% !important;
+  top: 5% !important;
+  margin-top: 70px !important;*/
+  bottom: -180% !important;
+  margin-right: auto !important;
+  margin-left: auto !important;
+  font-family:  "Roboto", sans-serif !important;
+  font-size: 12px !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  line-height: 16px !important;
+  letter-spacing: 0em !important;
+}
+
+#foxbase-selector  #foxbase-9 .sel-grid-list--checkboxes .sel-image-button {
+  padding: 21px !important; 
+  border: 2px solid #004982 !important;
+border-radius: 28px !important;
+}
+
+
+/* checkboxes hover */
+
+#foxbase-selector  #foxbase-9 .sel-grid-list--checkboxes .sel-image-button--selected {
+  background-color: #00438B !important;
+  border: 2px solid #00438B !important;
+
+  /* border-image-source: linear-gradient(270deg, #003e52 0%, #0a6afcdc 100%) !important; */
+  color: #ffffff !important;
+  border-image-slice: 1 !important;
+  box-shadow: none !important;
+  padding: 21px !important; 
+  border-radius: 28px !important;
+
+}
+
+
+#foxbase-selector  #foxbase-9 .sel-grid-list--checkboxes .sel-image-button--selected .app-grid-tile__secondary{
+  
+  color: #ffffff !important;
+}
+
+
+#foxbase-selector #foxbase-9 .sel-image-button--selected .mdc-grid-tile__primary-content {
+  object-fit: cover !important;
+  object-position: 100% 0 !important;
+  /* outline: none !important; */
+}
+
+
+#foxbase-selector .sel-grid-list--checkboxes .sel-image-button--selected .sel-grid-tile__primary {
+    background-color: #00438B !important;
+}
+#foxbase-selector .sel-image-button .mdc-grid-tile__primary.sel-grid-tile__primary {
+    transition: background-color 150ms linear !important;
+}
+/* checkbox selected text*/
+#foxbase-selector .sel-grid-list--checkboxes .sel-image-button--selected .app-grid-tile__title,
+#foxbase-selector .sel-grid-list--checkboxes .sel-image-button--selected .app-grid-tile__secondary {
+    color: #fff !important;
+}
+/* hide the select button in checkbox*/
+#foxbase-selector .sel-grid-list--checkboxes .sel-image-button--selected .mdc-typography--subtitle2:after {
+    display: none !important;
+}
+/* hide the select button in checkbox*/
+#foxbase-selector .sel-grid-list--checkboxes .sel-image-button[disabled] .mdc-typography--subtitle2:after {
+    display: none !important;
+}
+
+
+
+
+/* hide disabled checkboxes */
+#foxbase-selector #foxbase-9 .sel-color-button[disabled],
+#foxbase-selector #foxbase-9 .sel-image-button[disabled] {
+  display: none !important;
+}
+/* hide html div break in checkbox (otherwise, when disabled checkboxes are hidden, the checkbox will not continue in the previous empty spot/row) */
+#foxbase-selector #foxbase-9 .sel-question--with-navigation .sel-image-button-break {
+  display: none !important;
+}
+/* add margin to each third checkbox */
+@media (min-width: 840px) {
+  #foxbase-selector #foxbase-9 .sel-question--with-navigation .sel-image-button--divisible-by-three:nth-of-type(3n) {
+      margin-right: 24px !important;
+
+  }
+}
+
+/* new, their "1279px" is same as our 930px */
+@media (min-width: 992px) and (max-width: 1279px) {
+  #foxbase-selector #foxbase-9 .sel-grid-list--checkboxes .sel-grid-tile__primary {
+      padding-bottom: 105px !important; /*125*/
+  }
+
+  #foxbase-selector #foxbase-9 .sel-grid-list--checkboxes .sel-grid-tile__primary {
+      padding-bottom: 270px !important; /*125*/
+
+  }
+
+
+  #foxbase-selector #foxbase-9 .sel-grid-list--checkboxes .sel-image-button .app-grid-tile__title {
+      margin-bottom: 140px !important; /*170*/
+  }
+  #foxbase-selector #foxbase-9 .sel-grid-list--checkboxes .sel-image-button .mdc-typography--subtitle2 {
+      margin-bottom: 80px !important; /*100*/
+  }
+  #foxbase-selector #foxbase-9 .sel-grid-list--checkboxes .mdc-typography--subtitle2::after {
+      bottom: -170% !important; /*-210*/
+  }
+}
+/*new*/
+@media (min-width: 840px) and (max-width: 992px) {
+  #foxbase-selector #foxbase-9 .sel-grid-list--checkboxes .sel-grid-tile__primary {
+      padding-bottom: 230px !important; /*240*/
+  }
+  #foxbase-selector #foxbase-9 .sel-grid-list--checkboxes .sel-image-button .app-grid-tile__title {
+      margin-bottom: 300px !important; /*300*/
+  }
+  #foxbase-selector #foxbase-9 .sel-grid-list--checkboxes .sel-image-button .mdc-typography--subtitle2 {
+      margin-bottom: 130px !important; /*120*/
+  }
+  #foxbase-selector #foxbase-9 .sel-grid-list--checkboxes .mdc-typography--subtitle2::after {
+      bottom: -270% !important; /*-250*/
+  }
+}
+
+
+
+/* hide secondary filter */
+
+#foxbase-selector .app-result-page-filter__filter-box {
+display: none !important; 
+
+}
+
+
+#foxbase-selector .sel-top__section-name-share-button .mdc-button {
+  display: none !important;
+}
+
+
+
+/* hide thumb on the result page */
+
+#foxbase-selector .sel-navigation__start-detail {
+  display: none !important; 
+} 
+
+
+
+/* -----------------------------------RESULT PAGE------------------------ */
+
+
+/* -------- product recommendation -------- */
+
+/* product recommendation background */
+#foxbase-selector .app-result {
+  /* width: 308px !important;  */
+  background-color: #fff !important;
+  padding-top: 10px !important;
+  border: 2px solid #00438b !important;
+  border-radius: 24px !important; 
+}
+
+/* product recommendations sections */
+#foxbase-selector section {
+  /* display: block !important;
+  padding-left: 15px !important;
+  padding-right: 15px !important; */
+  padding-bottom: 20px !important;
+  /* padding-top: 11.5px !important; */
+}
+
+/* fix (otherwise products "skip" certian div container placeholders) */
+#foxbase-selector .app-clickthrough {
+  display: none !important;
+}
+
+/* border between product sections */
+#foxbase-selector result-page .sel-product__section:not(:last-of-type) {
+  border-bottom: 1px solid #1e73be !important;
+  height: auto !important;
+}
+
+/* add margin to minimize the border */
+#foxbase-selector result-page .sel-product__section:not(:last-of-type) {
+  height: auto !important;
+  margin-left: 15px !important;
+  margin-right: 15px !important;
+}
+
+/* -------- product sections on result page ---------*/
+
+/* product picture */
+#foxbase-selector .sel-product__image-section img {
+  display: block !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+/* picture in product section in full width and without border */
+#foxbase-selector result-page .sel-product__section:nth-of-type(2) {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+  border-bottom: none !important;
+}
+
+/* product title without border */
+#foxbase-selector result-page .sel-product__section:nth-of-type(1) {
+  border-bottom: none !important;
+  margin-bottom: 0px !important;
+  padding-bottom: 0px !important;
+}
+/* padding on title */
+#foxbase-selector h1.mdc-typography--headline5 {
+  padding-top: 10px !important;
+}
+#foxbase-selector section:nth-of-type(1) {
+  padding-bottom: 10px !important;
+}
+
+/* last section (button) and section before button without border */
+#foxbase-selector result-page .sel-product__section:nth-last-of-type(2),
+#foxbase-selector result-page .sel-product__section:nth-last-of-type(3),
+#foxbase-selector result-page .sel-product__section:nth-last-of-type(6) section.sel-product__list-section {
+  border-bottom: none !important;
+}
+
+/* padding after last section button */
+#foxbase-selector result-page .sel-product__section:nth-last-of-type(2) {
+  margin-bottom: 5px !important;
+  padding-bottom: 0px !important;
+}
+
+/* additional data expandable */
+#foxbase-selector .sel-product__list-expand-section {
+  border: none !important;
+  font-size: 15px !important;
+  color: #003e52 !important;
+  font-weight: 500 !important;
+  line-height: 21px !important;
+  font-style: normal !important;
+  margin: 0px !important;
+  padding: 0px !important;
+}
+#foxbase-selector .sel-product__section.sel-product__section-name-additional-data-expandable {
+  margin-bottom: 15px !important;
+  padding-bottom: 0 !important;
+}
+#foxbase-selector section.sel-product__list-expand-section.sel-product__section--ignore-calc-height {
+  padding-bottom: 0px !important;
+}
+#foxbase-selector .sel-product__list-expand-section--expanded .sel-product__list-expand-section__content {
+  margin-top: 0px !important;
+  margin-bottom: 10px !important;
+}
+#foxbase-selector .sel-product__list-expand-section-header {
+  padding-right: 0px !important;
+  color: #00438b !important;
+}
+/* #foxbase-selector ul {
+  list-style: disc !important;
+} */
+
+/* list in additional data when using html-list */
+#foxbase-selector .sel-product__list-section ul li::before {
+  /* display: none !important; */
+  margin-right: 10px !important;
+  color: #00438b !important;
+}
+#foxbase-selector .sel-product__list-section ul {
+  padding: 0 !important;
+}
+/* checkmark in list in additional data expandable */
+#foxbase-selector .sel-product__list-expand-section__content ul li:before {
+  margin-right: 10px !important;
+  color: #00438b !important;
+  display: inline-block !important;
+  font-family: "Material Icons" !important;
+  font-size: 24px !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  letter-spacing: normal !important;
+  line-height: 1 !important;
+  text-rendering: optimizeLegibility !important;
+  text-transform: none !important;
+  word-wrap: normal !important;
+  white-space: nowrap !important;
+  direction: ltr !important;
+  -webkit-font-feature-settings: "liga" !important;
+  font-feature-settings: "liga" !important;
+  content: "check" !important;
+}
+#foxbase-selector .sel-product__list-expand-section__content ul li {
+  height: auto !important;
+  min-height: unset !important;
+  padding: 6px 0 !important;
+  text-align: left !important;
+  white-space: normal !important;
+  overflow: visible !important;
+  display: flex !important;
+  position: relative !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+}
+
+/* CTA button in product recommendation */
+#foxbase-selector result-page section .mdc-button--raised:not(:disabled) {
+  /*border: 2px solid #003e52 !important;
+  color: #003e52 !important;*/
+  border: 2px solid #003e52 !important;
+  color: #003e52 !important;
+  font-family:  "Roboto", sans-serif !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  font-size: 18px !important;
+  padding: 25px 20px !important;
+  background-color: #003e52 !important; /*updated*/
+  color: #fff !important; /*updated*/
+}
+/*CTA button in product recommendation - hover */
+#foxbase-selector result-page section .mdc-button--raised:not(:disabled):hover,
+#foxbase-selector result-page section .mdc-button--raised:not(:disabled):active,
+#foxbase-selector result-page section .mdc-button--raised:not(:disabled):focus {
+  color: #003e52 !important; /*updated*/
+}
+
+
+
+
+
+
+
+
+
+
+/*----------------------------------------- tablet design ------------------------------------------ */
+
+/* questionnaire */
+
+/* width of the cards and checkboxes in tablet design */
+@media (min-width: 480px) and (max-width: 839px) {
+    #foxbase-selector .sel-question--with-navigation .sel-card {
+        width: 100% !important;
+        margin-right: 0px !important;
+        /* margin-left: 16px !important; */
+    }
+    #foxbase-selector .sel-question--with-navigation .sel-image-button--divisible-by-three {
+        width: 100% !important;
+        margin-right: 0px !important;
+        /* margin-left: 16px !important; */
+    }
+}
+
+
+@media (max-width: 480px) {
+     #foxbase-selector .sel-question--with-navigation .sel-card {
+        width: 100% !important;
+        margin-right: 0px !important;
+        /* margin-left: 16px !important; */
+    }
+
+}
+
+
+
+/* result page tablet card width */
+@media (min-width: 480px) and (max-width: 839px) {
+    #foxbase-selector result-page .mdc-layout-grid__cell {
+        width: 100% !important;
+        /* width: calc(100% - 32px) !important;
+        margin-right: 16px !important;
+        margin-left: 16px !important; */
+    }
+}
+
+/* buttons min width */
+/* @media (min-width: 480px) and (max-width: 839px) {
+    #foxbase-selector .mdc-button:not(:disabled), #foxbase-selector .mdc-button--raised:not(:disabled), #foxbase-selector .mdc-button--unelevated:not(:disabled) {
+        min-width: 150px !important;
+    }
+} */
+
+/* form page input fields width */
+@media (min-width: 480px) and (max-width: 839px) {
+    #foxbase-selector .mdc-layout-grid__cell--span-4-tablet {
+        width: 100% !important;
+        grid-column-end: span 8 !important;
+    }
+}
+
+/* @media (min-width: 480px) and (max-width: 839px) {  
+    .mdc-layout-grid__cell--span-2-tablet {
+        width: 100% !important;
+        grid-column-end: span 4 !important;
+    }
+} */
+
+/* restart, show result buttons on tablet */
+@media (min-width: 480px) and (max-width: 839px) {
+    #foxbase-selector
+        questionnaire-navigation.app-relative.mdc-layout-grid__cell.mdc-layout-grid__cell--span-0-phone.mdc-layout-grid__cell--span-2-tablet {
+        width: auto !important;
+        grid-column-end: span 4 !important;
+    }
+}
+
+/* hide navigation menu on tablet */
+@media (min-width: 480px) and (max-width: 839px) {
+    #foxbase-selector
+        questionnaire-navigation.app-relative.mdc-layout-grid__cell.mdc-layout-grid__cell--span-0-phone.mdc-layout-grid__cell--span-2-tablet {
+        display: none !important;
+    }
+}
+
+/* padding in grid for desktop */
+
+@media (min-width: 840px) {
+    #foxbase-selector .mdc-layout-grid__inner {
+        /*         display: flex !important;
+        flex-flow: row wrap !important;
+        align-items: stretch !important; */
+        /* padding-left: 24px !important; */
+        /* padding-right: 24px !important; */
+        padding-left: 0 !important;
+    }
+}
+
+/* padding in grid for tablet and mobile */
+
+
+/* progress bar on tablet */
+@media (min-width: 480px) and (max-width: 839px) {
+    #foxbase-selector .app-questionnaire-progress-bar {
+        /* width: calc(100% + 48px) !important; */
+        position: relative !important;
+        width: 100% !important; 
+    }
+}
+
+/* progress bar */
+
+@media (min-width: 480px) and (max-width: 839px) {
+    #foxbase-selector .app-questionnaire-progress-bar__background {
+        width: 100% !important;
+        /* position: relative !important;
+        grid-column-end: 11 !important; */
+    }
+}
+
+/* attempt to make the restart and show result buttons to stand in the centre */
+@media (min-width: 480px) and (max-width: 839px) {
+    #foxbase-selector .mdc-layout-grid__cell--span-3-tablet {
+        width: auto !important;
+        grid-column-end: span 3 !important;
+    }
+}
+
+/* changing the width of the header for tablet */
+
+@media (min-width: 480px) and (max-width: 839px) {
+    #foxbase-selector
+        header.sel-page-header.mdc-layout-grid__cell.mdc-layout-grid__cell--span-8-tablet.mdc-layout-grid__cell--span-12-desktop {
+        width: 100% !important;
+    }
+}
+
+/* fixing the width of the lines on tablet on form page */
+@media (min-width: 480px) and (max-width: 839px) {
+    #foxbase-selector .mdc-layout-grid__cell--span-6,
+    #foxbase-selector .mdc-layout-grid__cell--span-6-tablet {
+        width: 100% !important;
+        grid-column-end: span 8 !important;
+    }
+}
+
+@media (max-width: 839px) {
+    #foxbase-selector .sel-form-field.sel-form-field.sel-form-field {
+        margin-right: 24px !important;
+    }
+}
+
+@media (max-width: 839px) {
+    #foxbase-selector .sel-text-field__input.sel-text-field__input.sel-text-field__input {
+        width: calc(100% - 24px) !important;
+        margin-right: 24px !important;
+    }
+}
+
+/* buttons on the result page (padding) */
+
+
+
+@media  (max-width: 839px) {
+    #foxbase-selector .mdc-button:not(:disabled),
+    #foxbase-selector .mdc-button--raised:not(:disabled),
+    #foxbase-selector .mdc-button--unelevated:not(:disabled) {
+        /* padding: 35px 15px !important; */
+        text-transform: none !important;
+
+    }
+}
+
+/* Antworten 18 px statt 21, Beschreibung 14px statt 15) */
+
+@media (max-width: 480px) {
+    #foxbase-selector .sel-image-button .app-grid-tile__title,
+    #foxbase-selector .sel-card__title {
+        font-size: 18px !important;
+        line-height: 1.4em !important; 
+    }
+}
+/* Beschreibung 14px statt 15 */
+
+@media (max-width: 479px) {
+    #foxbase-selector result-page .sel-product__list-expand-section-header {
+        font-size: 14px !important;
+    }
+}
+
+@media (max-width: 479px) {
+    #foxbase-selector .form-page-text {
+        font-size: 20px !important;
+        line-height: 1.4em !important; 
+    }
+}
+
+@media (max-width: 479px) {
+    #foxbase-selector thank-you-page .mdc-typography--headline6 .thank-you-text {
+        font-size: 20px !important;
+    }
+}
+
+@media (max-width: 479px) {
+    #foxbase-selector result-page .mdc-typography--body1,
+    #foxbase-selector .sel-product__list-section ul li {
+        font-size: 14px !important;
+    }
+
+    #foxbase-selector .form-page-title {
+        font-size: 20px !important;
+    }
+
+    #foxbase-selector
+        .mdc-text-field:not(.mdc-text-field--disabled):not(.mdc-text-field--outlined):not(.mdc-text-field--textarea)
+        .mdc-text-field__input {
+        font-size: 14px !important;
+    }
+
+    #foxbase-selector .mdc-form-field > label {
+        font-size: 14px !important;
+    }
+
+    #foxbase-selector .sel-product__list-expand-section__content ul li:before {
+        font-size: 20px !important;
+    }
+
+    #foxbase-selector result-page .mdc-typography--body1,
+    #foxbase-selector .sel-product__list-section ul li {
+        line-height: 20px !important;
+    }
+    #foxbase-selector .mdc-typography--subtitle1 {
+        font-size: 18px !important;
+    }
+}
+/* Tausch der Reihenfolge von Icons und Page Titles */
+
+#foxbase-selector questionnaire-page span.mdc-typography--headline5 {
+    display: flex !important;
+    flex-direction: row-reverse;
+}
+#foxbase-selector .app-questionnaire-navigation-item__title .added-icon-0 {
+    grid-column-start: 1 !important;
+}
+
+
+
+
+
+
+@media (min-width: 480px) and (max-width: 839px) {
+    #foxbase-selector .mdc-layout-grid {
+    box-sizing: border-box !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    /* padding: 16px !important; */
+    /* padding: var(--mdc-layout-grid-margin-tablet, 16px) !important; */
+}
+}
+
+
+@media (min-width: 0px) and (max-width: 479px) {
+    #foxbase-selector .mdc-layout-grid {
+    box-sizing: border-box !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    /* padding: 16px !important; */
+    /* padding: var(--mdc-layout-grid-margin-phone, 16px) !important; */
+}
+}
+
+
+@media (max-width: 839px) {
+    #foxbase-selector .app-questionnaire-progress-bar {
+    width: 100% !important;
+    position: relative !important;
+}
+
+}
+
+
+
+/*----------------------------------------- mobile design ------------------------------------------ */
+
+/* questionnaire */
+
+/* width of the cards and checkboxes in mobile design */
+@media (max-width: 479px) {
+    #foxbase-selector .sel-question--with-navigation .sel-card {
+        width: 100% !important;
+        margin-right: 0 !important;
+        /* margin-left: 16px !important; */
+    }
+    #foxbase-selector .sel-question--with-navigation .sel-image-button--divisible-by-three {
+        width: 100% !important;
+        margin-right: 0 !important;
+        /* margin-left: 16px !important; */
+    }
+}
+
+
+
+#foxbase-selector .mdc-layout-grid__inner {
+    padding: 20px !important;
+}
+

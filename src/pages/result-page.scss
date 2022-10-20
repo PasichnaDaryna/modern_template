@@ -1,0 +1,17 @@
+/* Beschreibung 14px statt 15 */
+
+@media (max-width: 479px) {
+    #foxbase-selector result-page .sel-product__list-expand-section-header {
+        font-size: 14px !important;
+    }
+}
+
+
+
+/* buttons on the result page (padding) */
+
+@media (min-width: 480px) and (max-width: 839px) {
+    #foxbase-selector result-page section .mdc-button--raised:not(:disabled) {
+        /* padding: 35px 15px !important; */
+    }
+}

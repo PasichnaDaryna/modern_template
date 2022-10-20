@@ -1,0 +1,101 @@
+@import "../abstracts/variables";
+
+
+
+// Cards
+
+
+#foxbase-selector {
+    & .sel-card {
+  /* --------------------------Cards---------------------- */
+  border-radius: 24px !important; 
+
+
+        // adjust image in cards
+    &__image {
+      /* adjust image in cards */
+      width: 100% !important;
+      border-radius: 50% !important; 
+      
+    }
+
+
+
+
+    &__title {
+      padding: 8px 8px !important;
+      color: $dark-blue-secondary !important;
+      font-size: 1.25rem !important;
+      line-height: 1.5 !important;
+    }
+
+
+
+    &--activated:not(:disabled),
+    & .sel-card--activated:not(:disabled):hover {
+      /* no standard hover effect in cards */
+    background-color: transparent !important;
+    }
+
+}
+
+& .sel-question--with-navigation .sel-card {
+    margin-right: 24px !important;
+    margin-bottom: 24px !important;
+    border-radius: 24px !important; 
+}
+
+
+@media (max-width: 839px) {
+    & .sel-question--with-navigation .sel-card {
+        margin-right: 10px !important;
+    }
+     
+}
+
+
+& .mdc-typography--headline6 {
+  color: $dark-blue-secondary !important;
+  font-size: 1.25rem !important;
+  line-height: 1.5 !important;
+}
+
+
+
+
+
+//  --------------------------------Cards hover---------------------------------------
+// cards background and padding (plus white border to avoid jumping when hovering)
+
+
+& .mdc-card__primary-action {
+
+  &,  
+  &:last-child
+     {
+
+    /* cards background and padding (plus white border to avoid jumping when hovering) */
+    background: $white !important;
+    border: 2px solid $white !important;
+    padding: 25px !important;
+    color: $dark-blue-secondary !important; 
+}
+
+
+  &:last-child:hover,
+  &:last-child:active {
+
+    /* hover and active on cards */
+    /* background: linear-gradient(270deg, #003e52 0%, #0a6afcdc 100%) !important; */
+    border-image-slice: 1 !important;
+    border: 2px solid $dark-blue-secondary !important;
+    color: $dark-blue-secondary !important;
+
+      & .sel-card__title {
+        color: $dark-blue-secondary !important;
+
+      } 
+  }
+}
+
+}

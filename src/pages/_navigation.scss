@@ -1,0 +1,66 @@
+@import "../abstracts/variables";
+
+
+
+
+#foxbase-selector {
+    
+& .app-questionnaire-navigation-item--active .app-questionnaire-navigation-item__title::before {
+
+  // ------------Navigation-----------------------------------
+  /* navigation title */
+  content: "" !important;
+  display: block !important;
+  background-size: 30px !important;
+  background-repeat: no-repeat !important;
+  width: 30px !important;
+  height: 30px !important;
+  position: absolute !important;
+  top: calc(50% - 15px) !important;
+  left: 0px !important;
+}
+
+& .app-questionnaire-navigation-item {
+  padding-left: 40px !important;
+  padding-right: 10px !important;
+}
+
+
+
+
+& .app-questionnaire-navigation-item .app-questionnaire-navigation-item__title {
+ 
+  font-weight: bold !important;
+  display: flex !important;
+  gap: 0.3rem !important;
+  
+}
+
+
+& .app-questionnaire-navigation-item .app-questionnaire-navigation-item__answer {
+  text-transform: none !important;
+  // color: $grey-color !important;
+  color: $grey-color;     
+  
+}
+
+// navigation arrow
+
+& .app-questionnaire-navigation-item--active .app-questionnaire-navigation-item__title::before {
+  /*navigation arrow*/
+  content: "" !important;
+  display: block !important;
+  background-image: url(https://cdn.foxbase.de/f/Selector/Dokumentation/Icon_Pfeil.svg) !important;
+  background-size: 30px !important;
+  background-repeat: no-repeat !important;
+  width: 30px !important;
+  height: 30px !important;
+  position: absolute !important;
+  top: 0px !important;
+  left: 0px !important;
+}
+/*navigation to the right for space for arrow*/
+& .app-questionnaire-navigation-item {
+  padding-left: 40px !important;
+}
+}

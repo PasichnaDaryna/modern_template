@@ -1,0 +1,58 @@
+   
+@import "../abstracts/variables";
+
+
+
+
+#foxbase-selector {
+    
+& .app-page-header__icon {
+  /* hide icon in the title */
+  display: none !important; 
+}
+
+@media (max-width: 768px) {
+  & .mdc-layout-grid__cell {
+    grid-column-end: span 9 !important;
+  }
+}
+
+& .sel-page-header {
+
+
+  /* question number in the header   */
+  & .app-page-header-container .mdc-typography--headline5 .question-number {
+  
+  font-weight: 700 !important;
+  font-size: 28px !important;
+  text-transform: uppercase !important;
+  padding-bottom: 10px !important;
+  color: #575760 !important;
+  // $grey-color-secondary
+}
+
+& .app-page-header-container .mdc-typography--headline5 {
+  display: flex !important;
+  flex-direction: row !important;
+  gap: 0.5rem !important;
+  font-style: bold !important;
+  font-weight: 700 !important;
+  font-size: 28px !important;
+  /* text-transform: uppercase !important; */
+  padding-bottom: 10px !important;
+  color: $dark-blue-secondary !Important;
+  // $dark-blue-secondary 
+}
+
+& .sel-question__header {
+  display: flex !important;
+  gap: 0.8rem !important;
+  align-items: center !important;
+}
+& .sel-question__header .remark {
+  max-height: 36px !important;
+  flex-shrink: 0 !important;
+}
+
+}
+}

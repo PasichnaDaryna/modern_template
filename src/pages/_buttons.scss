@@ -1,0 +1,37 @@
+@import "../abstracts/variables";
+
+
+#foxbase-selector {
+    
+
+& button {
+
+  &#app-back-button, &#app-next-button {
+/* Back Next buttons  */
+/* To prepare the styling like this, please add arrows '➜
+' to next button label and back button label in the settings */
+  background-color: transparent !important;
+  border: 2px solid $dark-blue-primary !important;
+  border-radius: 24px !important;
+  box-shadow: none !important;
+  color: $dark-blue-primary !important;
+  font-size: 30px !important;
+}
+
+    &#app-back-button {
+    -moz-transform: scaleX(-1) !important;
+    -o-transform: scaleX(-1) !important;
+    -webkit-transform: scaleX(-1) !important;
+    transform: scaleX(-1) !important;
+    }
+
+    &.mdc-button {
+    border-radius: 24px !important;
+    min-height: 48px !important;
+    padding: 10px !important;
+    font-size: 1rem !important;
+    font-weight: bold !important;
+    line-height: 1 !important;
+        }
+}
+}

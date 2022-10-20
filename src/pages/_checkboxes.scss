@@ -1,0 +1,89 @@
+@import "../abstracts/variables";
+
+/* _______________________________Checkboxes______________________ */
+
+#foxbase-selector {
+    /*---Checkboxes without image---*/
+
+/*hide checkbox image spacing*/
+& .mdc-grid-tile__primary-content {
+  display: none !important;
+}
+& .mdc-grid-tile__primary {
+  padding-bottom: 0 !important;
+}
+& .sel-grid-list--checkboxes .sel-checkbox {
+  position: absolute !important;
+  top: 5px !important;
+  right: 0 !important;
+  overflow: visible !important;
+}
+
+/*hide checkmark triangle*/
+& .sel-grid-list--checkboxes .sel-checkbox__background-triangle {
+  border-width: 0 !important;
+}
+
+/*push checkmark to the front*/
+& .sel-grid-list--checkboxes .sel-grid-tile__primary {
+  z-index: 1 !important;
+}
+
+/*Checkmark*/
+& .sel-grid-list--checkboxes .sel-checkbox__native-control ~ .sel-checkbox__background .sel-checkbox__checkmark i {
+  font-size: 30px !important;
+  line-height: 0.5em !important;
+  display: flex !important;
+  justify-content: center !important;
+  padding-right: 20px !important;
+}
+
+/*being able to click on the checkmark area*/
+& questionnaire-page .mdc-checkbox__native-control {
+  display: none !important;
+}
+
+
+/*changing the title of the checkbox */
+& .sel-image-button .app-grid-tile__secondary {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 8px !important;
+  border-radius: 30px !important; 
+}
+
+/*---checkbox title desktop/mobile---*/
+@media (min-width: 480px) and (max-width: 839px) {
+  & .sel-image-button .app-grid-tile__title {
+      font-size: 14px !important;
+      word-break: break-word !important;
+      -webkit-hyphens: auto !important;
+      -moz-hyphens: auto !important;
+      hyphens: auto !important;
+  }
+}
+@media (max-width: 479px) {
+  & .sel-grid-list--checkboxes .sel-checkbox {
+      position: absolute !important;
+      top: 12px !important;
+      right: 0 !important;
+      overflow: visible !important;
+  }
+}
+
+
+
+
+
+& .sel-top__section-name-share-button .mdc-button,
+
+& .sel-top__section-name-cta-api-button .mdc-button {
+border-radius: 24px !important;
+background-color: $white !important;
+color: #004982 !important;
+border: 1px solid #004982 !important;
+
+}
+
+}

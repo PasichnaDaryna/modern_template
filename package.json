@@ -1,0 +1,21 @@
+{
+  "name": "scss-template",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "compile": "sass --no-source-map src/main.scss:stylesheets/main.css",
+    "compile:watch": "sass --no-source-map --watch src/main.scss:stylesheets/main.css",
+    "lint": "prettier-stylelint --write 'src/**/*.scss'"
+  },
+  "prettier": {},
+  "devDependencies": {
+    "prettier": "^2.7.1",
+    "prettier-stylelint": "^0.4.2",
+    "sass": "^1.54.4",
+    "stylelint": "^14.10.0",
+    "stylelint-config-prettier-scss": "^0.0.1",
+    "stylelint-config-standard-scss": "^5.0.0",
+    "stylelint-prettier": "^2.0.0"
+  }
+}

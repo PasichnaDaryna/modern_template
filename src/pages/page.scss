@@ -1,0 +1,11 @@
+@use "../abstracts";
+
+#foxbase-selector {
+
+
+& .app-page-header__icon {
+  /* hide icon in the title */
+  display: none !important; 
+}
+
+}
