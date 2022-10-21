@@ -1,17 +1,93 @@
-/* Beschreibung 14px statt 15 */
+@import "../abstracts/variables";
 
-@media (max-width: 479px) {
-    #foxbase-selector result-page .sel-product__list-expand-section-header {
-        font-size: 14px !important;
+/* ----------------------------------progress bar on the result page------------------------------------------------------- */
+/*On Result page: Switch position of page title and progress bar and hide page subtitle*/
+
+#foxbase-selector {
+  & result-page .app-result {
+      grid-column-start: 1 !important;
+  }
+  & result-page .sel-navigation.ng-scope.sel-navigation--progress-bar {
+      display: inline-grid !important;
+      width: 100% !important;
+      grid-template-columns: repeat(12, 1fr) !important;
+  }
+  & result-page questionnaire-progress-bar.sel-navigation__progress-bar {
+      grid-row-start: 1 !important;
+      grid-column: 1/span 12 !important;
+  }
+
+
+
+
+  & result-page span.sel-navigation__primary p.mdc-typography--headline5 {
+      grid-row-start: 2 !important;
+      grid-column: 1/span 9 !important;
+      margin-top: 30px !important;
+     
+  }
+  & result-page button.sel-navigation__button.mdc-button.mdc-button--raised {
+      grid-row-start: 2 !important;
+      grid-column: 10/span 3 !important;
+      margin-top: 30px !important;
+      margin-left: 30px !important;
+  }
+
+
+  & result-page questionnaire-progress-bar.sel-navigation__progress-bar {
+      grid-row-start: 1 !important;
+      grid-column: 1/span 8 !important;
+  }
+  & result-page span.sel-navigation__primary.mdc-typography--headline5 {
+      grid-row-start: 2 !important;
+      grid-column: 1/span 6 !important;
+      margin-top: 30px !important;
+  }
+  & result-page button.sel-navigation__button.mdc-button.mdc-button--raised {
+      grid-row-start: 2 !important;
+      grid-column: 7/span 2 !important;
+      margin-top: 30px !important;
+      margin-left: 24px !important;
+      min-width: 120px !important;
+  }
+  
+
+  & result-page .sel-navigation.ng-scope.sel-navigation--progress-bar { 
+    @media (min-width: 480px) and (max-width: 839px) {
+        display: inline-grid !important;
+      width: 100% !important;
+      grid-template-columns: repeat(8, 1fr) !important;
     }
+   
+  }
+
+
+& result-page .sel-navigation--progress-bar .sel-navigation__progress-bar {
+  width: 100% !important;
+  margin-top: 0 !important;
+}
+@media (min-width: 0px) and (max-width: 479px) {
+  & result-page .sel-navigation.ng-scope.sel-navigation--progress-bar {
+      display: inline-grid !important;
+      width: 100% !important;
+      grid-template-columns: repeat(4, 1fr) !important;
+  }
+  & result-page questionnaire-progress-bar.sel-navigation__progress-bar {
+      grid-row-start: 1 !important;
+      grid-column: 1/span 4 !important;
+  }
+  & result-page span.sel-navigation__primary.mdc-typography--headline5 {
+      grid-row-start: 2 !important;
+      grid-column: 1/span 4 !important;
+      margin-top: 30px !important;
+      text-align: left !important;
+  }
+  & result-page button.sel-navigation__button.mdc-button.mdc-button--raised {
+      grid-row-start: 3 !important;
+      grid-column: 1/span 2 !important;
+      margin-top: 30px !important;
+      margin-left: 0px !important;
+  }
 }
 
-
-
-/* buttons on the result page (padding) */
-
-@media (min-width: 480px) and (max-width: 839px) {
-    #foxbase-selector result-page section .mdc-button--raised:not(:disabled) {
-        /* padding: 35px 15px !important; */
-    }
 }

@@ -17,9 +17,49 @@
   }
 }
 
+
+
+//  ---------------------------PROGRESS BAR TOP ----------------
+
+
+@media (min-width: 840px){
+  & header.sel-page-header.mdc-layout-grid__cell.mdc-layout-grid__cell--span-8-tablet.mdc-layout-grid__cell--span-12-desktop {
+  
+/* sets where the page header should start and end horizontally*/  
+  grid-column-start: 1 !important;
+  grid-column-end: span 12 !important;
+}}
+
+& header.sel-page-header.mdc-layout-grid__cell.mdc-layout-grid__cell--span-8-tablet.mdc-layout-grid__cell--span-12-desktop {
+  /* changes the order of elements in the header */
+  display: inline-flex !important;
+  flex-direction: column-reverse !important;
+  margin-top: -8px !important;
+}
+
+
+/* The heading */
+
+@media (min-width: 840px) {
+   /* changes the order of elements in the header */
+& header.sel-page-header.mdc-layout-grid__cell.mdc-layout-grid__cell--span-8-tablet.mdc-layout-grid__cell--span-12-desktop {
+  display: inline-flex !important;
+  flex-direction: column-reverse !important;
+  margin-top: -10px !important;
+}
+
+
+
+/* setting the width, height and bg color */
+& .app-questionnaire-progress-bar__background {
+  position: relative !important;
+  width: 100% !important;
+  background-color: $progress-bar-background !important;
+  height: 10px !important;
+}
+
+
 & .sel-page-header {
-
-
   /* question number in the header   */
   & .app-page-header-container .mdc-typography--headline5 .question-number {
   
@@ -53,6 +93,6 @@
   max-height: 36px !important;
   flex-shrink: 0 !important;
 }
-
+}
 }
 }

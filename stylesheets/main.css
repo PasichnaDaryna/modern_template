@@ -1,56 +1,75 @@
-#foxbase-selector .app-page-header__icon {
-  /* hide icon in the title */
-  display: none !important;
+/* ----------------------------------progress bar on the result page------------------------------------------------------- */
+/*On Result page: Switch position of page title and progress bar and hide page subtitle*/
+#foxbase-selector result-page .app-result {
+  grid-column-start: 1 !important;
 }
-
-/* Beschreibung 14px statt 15 */
-@media (max-width: 479px) {
-  #foxbase-selector result-page .sel-product__list-expand-section-header {
-    font-size: 14px !important;
-  }
+#foxbase-selector result-page .sel-navigation.ng-scope.sel-navigation--progress-bar {
+  display: inline-grid !important;
+  width: 100% !important;
+  grid-template-columns: repeat(12, 1fr) !important;
 }
-/* buttons on the result page (padding) */
+#foxbase-selector result-page questionnaire-progress-bar.sel-navigation__progress-bar {
+  grid-row-start: 1 !important;
+  grid-column: 1/span 12 !important;
+}
+#foxbase-selector result-page span.sel-navigation__primary p.mdc-typography--headline5 {
+  grid-row-start: 2 !important;
+  grid-column: 1/span 9 !important;
+  margin-top: 30px !important;
+}
+#foxbase-selector result-page button.sel-navigation__button.mdc-button.mdc-button--raised {
+  grid-row-start: 2 !important;
+  grid-column: 10/span 3 !important;
+  margin-top: 30px !important;
+  margin-left: 30px !important;
+}
+#foxbase-selector result-page questionnaire-progress-bar.sel-navigation__progress-bar {
+  grid-row-start: 1 !important;
+  grid-column: 1/span 8 !important;
+}
+#foxbase-selector result-page span.sel-navigation__primary.mdc-typography--headline5 {
+  grid-row-start: 2 !important;
+  grid-column: 1/span 6 !important;
+  margin-top: 30px !important;
+}
+#foxbase-selector result-page button.sel-navigation__button.mdc-button.mdc-button--raised {
+  grid-row-start: 2 !important;
+  grid-column: 7/span 2 !important;
+  margin-top: 30px !important;
+  margin-left: 24px !important;
+  min-width: 120px !important;
+}
 @media (min-width: 480px) and (max-width: 839px) {
-  #foxbase-selector result-page section .mdc-button--raised:not(:disabled) {
-    /* padding: 35px 15px !important; */
+  #foxbase-selector result-page .sel-navigation.ng-scope.sel-navigation--progress-bar {
+    display: inline-grid !important;
+    width: 100% !important;
+    grid-template-columns: repeat(8, 1fr) !important;
   }
 }
-#foxbase-selector .app-page-header__icon {
-  /* hide icon in the title */
-  display: none !important;
+#foxbase-selector result-page .sel-navigation--progress-bar .sel-navigation__progress-bar {
+  width: 100% !important;
+  margin-top: 0 !important;
 }
-@media (max-width: 768px) {
-  #foxbase-selector .mdc-layout-grid__cell {
-    grid-column-end: span 9 !important;
+@media (min-width: 0px) and (max-width: 479px) {
+  #foxbase-selector result-page .sel-navigation.ng-scope.sel-navigation--progress-bar {
+    display: inline-grid !important;
+    width: 100% !important;
+    grid-template-columns: repeat(4, 1fr) !important;
   }
-}
-#foxbase-selector .sel-page-header {
-  /* question number in the header   */
-}
-#foxbase-selector .sel-page-header .app-page-header-container .mdc-typography--headline5 .question-number {
-  font-weight: 700 !important;
-  font-size: 28px !important;
-  text-transform: uppercase !important;
-  padding-bottom: 10px !important;
-  color: #575760 !important;
-}
-#foxbase-selector .sel-page-header .app-page-header-container .mdc-typography--headline5 {
-  display: flex !important;
-  flex-direction: row !important;
-  gap: 0.5rem !important;
-  font-style: bold !important;
-  font-weight: 700 !important;
-  font-size: 28px !important;
-  /* text-transform: uppercase !important; */
-  padding-bottom: 10px !important;
-  color: #00438b !important;
-}
-#foxbase-selector .sel-page-header .sel-question__header {
-  display: flex !important;
-  gap: 0.8rem !important;
-  align-items: center !important;
-}
-#foxbase-selector .sel-page-header .sel-question__header .remark {
-  max-height: 36px !important;
-  flex-shrink: 0 !important;
+  #foxbase-selector result-page questionnaire-progress-bar.sel-navigation__progress-bar {
+    grid-row-start: 1 !important;
+    grid-column: 1/span 4 !important;
+  }
+  #foxbase-selector result-page span.sel-navigation__primary.mdc-typography--headline5 {
+    grid-row-start: 2 !important;
+    grid-column: 1/span 4 !important;
+    margin-top: 30px !important;
+    text-align: left !important;
+  }
+  #foxbase-selector result-page button.sel-navigation__button.mdc-button.mdc-button--raised {
+    grid-row-start: 3 !important;
+    grid-column: 1/span 2 !important;
+    margin-top: 30px !important;
+    margin-left: 0px !important;
+  }
 }
