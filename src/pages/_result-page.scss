@@ -1,0 +1,148 @@
+@import "../abstracts/variables";
+
+/* ----------------------------------progress bar on the result page------------------------------------------------------- */
+/*On Result page: Switch position of page title and progress bar and hide page subtitle*/
+
+#foxbase-selector {
+
+& result-page {
+
+    & .app-result {
+
+      /* product recommendation background */
+  grid-column-start: 1 !important;
+  background-color: $white !important;
+  padding-top: 10px !important;
+  border: 2px solid $dark-blue-secondary !important;
+  border-radius: 24px !important; 
+  }
+
+    & .sel-navigation {
+
+      &.ng-scope.sel-navigation--progress-bar {
+      display: inline-grid !important;
+      width: 100% !important;
+      grid-template-columns: repeat(12, 1fr) !important;
+  }
+
+}
+
+    &__button.mdc-button.mdc-button--raised {
+      grid-row-start: 2 !important;
+      grid-column: 10/span 3 !important;
+      margin-top: 3$min-mobile-width !important;
+      margin-left: 30px !important;
+  }
+
+
+    & span.sel-navigation__primary p.mdc-typography--headline5 {
+      grid-row-start: 2 !important;
+      grid-column: 1/span 9 !important;
+      margin-top: 30px !important;
+     
+  }
+
+
+    & questionnaire-progress-bar.sel-navigation__progress-bar {
+      grid-row-start: 1 !important;
+      grid-column: 1/span 8 !important;
+  }
+
+    & span.sel-navigation__primary.mdc-typography--headline5 {
+      grid-row-start: 2 !important;
+      grid-column: 1/span 6 !important;
+      margin-top: 30px !important;
+  }
+
+
+    & button.sel-navigation__button.mdc-button.mdc-button--raised {
+      grid-row-start: 2 !important;
+      grid-column: 7/span 2 !important;
+      margin-top: 30px !important;
+      margin-left: 24px !important;
+      min-width: 120px !important;
+  }
+
+
+    & .sel-navigation.ng-scope.sel-navigation--progress-bar { 
+    @media (min-width: 480px) and (max-width: 839px) {
+        display: inline-grid !important;
+      width: 100% !important;
+      grid-template-columns: repeat(8, 1fr) !important;
+    }
+   
+  }
+  
+
+    & .sel-navigation--progress-bar .sel-navigation__progress-bar {
+  width: 100% !important;
+  margin-top: 0 !important;
+}
+
+
+
+
+
+
+
+
+
+
+& section {
+  
+/* product recommendations sections */
+  padding-bottom: 20px !important;
+ 
+}
+
+
+& .app-clickthrough {
+  /* fix (otherwise products "skip" certian div container placeholders) */
+  display: none !important;
+}
+
+
+& result-page .sel-product__section:not(:last-of-type) {
+  /* border between product sections */
+  border-bottom: 1px solid $dark-blue-tertiary !important;
+  height: auto !important;
+}
+
+
+& result-page .sel-product__section:not(:last-of-type) {
+  /* add margin to minimize the border */
+  height: auto !important;
+  margin-left: 15px !important;
+  margin-right: 15px !important;
+}
+
+
+
+@media (min-width:$min-mobile-width) and (max-width: $menu-mobile-width) {
+    &  .sel-navigation.ng-scope.sel-navigation--progress-bar {
+      display: inline-grid !important;
+      width: 100% !important;
+      grid-template-columns: repeat(4, 1fr) !important;
+  }
+    &  questionnaire-progress-bar.sel-navigation__progress-bar {
+      grid-row-start: 1 !important;
+      grid-column: 1/span 4 !important;
+  }
+    &  span.sel-navigation__primary.mdc-typography--headline5 {
+      grid-row-start: 2 !important;
+      grid-column: 1/span 4 !important;
+      margin-top: 30px !important;
+      text-align: left !important;
+  }
+    &  button.sel-navigation__button.mdc-button.mdc-button--raised {
+      grid-row-start: 3 !important;
+      grid-column: 1/span 2 !important;
+      margin-top: 30px !important;
+      margin-left: 0 !important;
+  }
+    }
+
+ }
+
+
+}

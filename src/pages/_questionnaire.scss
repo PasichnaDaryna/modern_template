@@ -20,22 +20,6 @@
 @use "../abstracts";
 @import "../abstracts/variables";
 
-
-// Variables for the project
-// $dark-blue-primary: #0a6dbc;
-// $dark-blue-secondary: #00438b;
-// $dark-blue-tertiary: #1e73be; 
-// $white: #ffffff;
-// $headline-color: #4c4c4c;
-// $dark-border: #003e52; 
-// $color-black: #000000; 
-
-// $light-grey-color: #d3d3d3;
-// $grey-color: #b2b2be;
-// $grey-color-secondary: #575760; 
-// $progress-bar-background: #e0e0e0;
-
-
 #foxbase-selector {
 
 font-family:  "Roboto", sans-serif !important;
@@ -91,18 +75,14 @@ font-family:  "Roboto", sans-serif !important;
   justify-self: flex-end !important;
   padding-left: 3rem !important;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-zwischen-width) {
   & {
     display: block !important;
     grid-column: 10/span 3 !important;
     width: 100% !important;
   }
 }
-
 }
-
-
-
 & img {
   & .star {
   max-height: 25px !important;
@@ -111,13 +91,9 @@ font-family:  "Roboto", sans-serif !important;
   max-height: 35px !important;
 }
 }
-
-
-
-
 /* resets padding and margin for the selector */
 
-@media (min-width: 840px) {
+@media (min-width: $menu-desktop-width) {
   & .mdc-layout-grid {
   box-sizing: border-box !important;
   margin: 0 auto !important;
@@ -126,15 +102,7 @@ font-family:  "Roboto", sans-serif !important;
 }
 }
 
-
-
-
-
-
-
-
-
-@media (max-width: 839px) {
+@media (max-width: $max-tablet-width) {
 & .app-questionnaire-progress-bar__background {
   position: relative !important;
   width: 100% !important;
@@ -150,7 +118,7 @@ font-family:  "Roboto", sans-serif !important;
       position: relative !important;
   }
 }
-@media (max-width: 839px) {
+@media (max-width: $max-tablet-width) {
   result-page .sel-navigation--progress-bar .sel-navigation__progress-bar {
       width: calc(100% + 48px) !important;
       position: relative !important;
@@ -166,7 +134,7 @@ font-family:  "Roboto", sans-serif !important;
 
 
 /* progress bar on tablet */
-@media (min-width: 480px) and (max-width: 839px) {
+@media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
   & .app-questionnaire-progress-bar {
       width: calc(100% + 48px) !important;
       position: relative !important;
@@ -175,7 +143,7 @@ font-family:  "Roboto", sans-serif !important;
 
 /* progress bar */
 
-@media (min-width: 480px) and (max-width: 839px) {
+@media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
   & .app-questionnaire-progress-bar__background {
       width: 100% !important;
       /* position: relative !important;
@@ -192,18 +160,14 @@ font-family:  "Roboto", sans-serif !important;
 }
 
 
-
-
 /* ----------------------------Progress BAR with GRADIENT------------ */
 & .app-questionnaire-progress-bar__background {
   height: 10px !important;
   
 }
 
-
 & .app-questionnaire-progress-bar__progress {
-  background: linear-gradient(270deg, #003e52 0%, #0a6afcdc 100%) !important;
-  // *270deg, $dark-border 0%, #0a6afcdc 100%)
+  background: linear-gradient(270deg, $dark-border 0%, $bg-blue 100%) !important;
   height: 10px !important;
   
 }
@@ -212,9 +176,7 @@ font-family:  "Roboto", sans-serif !important;
 
 @media (min-width: 840px){
   & header.sel-page-header.mdc-layout-grid__cell.mdc-layout-grid__cell--span-8-tablet.mdc-layout-grid__cell--span-12-desktop {
-  
-  /* sets where the page header should start and end horizontally*/
-    grid-column-start: 1 !important;
+  grid-column-start: 1 !important;
   grid-column-end: span 12 !important;
 }}
 
@@ -291,7 +253,7 @@ font-family:  "Roboto", sans-serif !important;
   line-height: 21px !important;
   margin-bottom: 120px !important; 
 }
-@media (max-width: 839px) {
+@media (max-width: $max-tablet-width) {
     & #foxbase-9 .sel-grid-list--checkboxes .sel-image-button .app-grid-tile__secondary {
         margin-bottom: 20px !important; 
     }
@@ -485,95 +447,60 @@ display: none !important;
 } 
 
 
-
-/* -----------------------------------RESULT PAGE------------------------ */
-
-
-/* -------- product recommendation -------- */
-
-/* product recommendation background */
-& .app-result {
-  /* width: 308px !important;  */
-  background-color: $white !important;
-  padding-top: 10px !important;
-  border: 2px solid $dark-blue-secondary !important;
-  border-radius: 24px !important; 
-}
-
-/* product recommendations sections */
-& section {
-  /* display: block !important;
-  padding-left: 15px !important;
-  padding-right: 15px !important; */
-  padding-bottom: 20px !important;
-  /* padding-top: 11.5px !important; */
-}
-
-/* fix (otherwise products "skip" certian div container placeholders) */
-& .app-clickthrough {
-  display: none !important;
-}
-
-/* border between product sections */
-& result-page .sel-product__section:not(:last-of-type) {
-  border-bottom: 1px solid #1e73be !important;
-  height: auto !important;
-}
-
-/* add margin to minimize the border */
-& result-page .sel-product__section:not(:last-of-type) {
-  height: auto !important;
-  margin-left: 15px !important;
-  margin-right: 15px !important;
-}
-
 /* -------- product sections on result page ---------*/
 
-/* product picture */
+
 & .sel-product__image-section img {
+  /* product picture */
   display: block !important;
   margin-left: auto !important;
   margin-right: auto !important;
 }
-/* picture in product section in full width and without border */
+
 & result-page .sel-product__section:nth-of-type(2) {
+  /* picture in product section in full width and without border */
   margin-left: 0px !important;
   margin-right: 0px !important;
   border-bottom: none !important;
 }
 
-/* product title without border */
+
 & result-page .sel-product__section:nth-of-type(1) {
+  /* product title without border */
   border-bottom: none !important;
   margin-bottom: 0px !important;
   padding-bottom: 0px !important;
 }
-/* padding on title */
+
 & h1.mdc-typography--headline5 {
+  /* padding on title */
   padding-top: 10px !important;
 }
 & section:nth-of-type(1) {
   padding-bottom: 10px !important;
 }
 
-/* last section (button) and section before button without border */
+
 & result-page .sel-product__section:nth-last-of-type(2),
 & result-page .sel-product__section:nth-last-of-type(3),
 & result-page .sel-product__section:nth-last-of-type(6) section.sel-product__list-section {
+  /* last section (button) and section before button without border */
   border-bottom: none !important;
 }
 
-/* padding after last section button */
+
 & result-page .sel-product__section:nth-last-of-type(2) {
+  /* padding after last section button */
   margin-bottom: 5px !important;
   padding-bottom: 0px !important;
 }
 
-/* additional data expandable */
+
 & .sel-product__list-expand-section {
+  /* additional data expandable */
   border: none !important;
   font-size: 15px !important;
-  color: #003e52 !important;
+  color: $dark-border !important;
   font-weight: 500 !important;
   line-height: 21px !important;
   font-style: normal !important;
@@ -595,12 +522,11 @@ display: none !important;
   padding-right: 0px !important;
   color: $dark-blue-secondary !important;
 }
-/* & ul {
-  list-style: disc !important;
-} */
 
-/* list in additional data when using html-list */
+
+
 & .sel-product__list-section ul li::before {
+  /* list in additional data when using html-list */
   /* display: none !important; */
   margin-right: 10px !important;
   color: $dark-blue-secondary !important;
@@ -608,8 +534,9 @@ display: none !important;
 & .sel-product__list-section ul {
   padding: 0 !important;
 }
-/* checkmark in list in additional data expandable */
+
 & .sel-product__list-expand-section__content ul li:before {
+  /* checkmark in list in additional data expandable */
   margin-right: 10px !important;
   color: $dark-blue-secondary !important;
   display: inline-block !important;
@@ -643,25 +570,26 @@ display: none !important;
   justify-content: flex-start !important;
 }
 
-/* CTA button in product recommendation */
+
 & result-page section .mdc-button--raised:not(:disabled) {
-  /*border: 2px solid #003e52 !important;
-  color: #003e52 !important;*/
-  border: 2px solid #003e52 !important;
-  color: #003e52 !important;
+  /* CTA button in product recommendation */
+  
+  border: 2px solid $dark-border !important;
+  color: $dark-border !important;
   font-family:  "Roboto", sans-serif !important;
   font-style: normal !important;
   font-weight: 500 !important;
   font-size: 18px !important;
   padding: 25px 20px !important;
-  background-color: #003e52 !important; /*updated*/
+  background-color: $dark-border !important; /*updated*/
   color: $white !important; /*updated*/
 }
-/*CTA button in product recommendation - hover */
+
 & result-page section .mdc-button--raised:not(:disabled):hover,
 & result-page section .mdc-button--raised:not(:disabled):active,
 & result-page section .mdc-button--raised:not(:disabled):focus {
-  color: #003e52 !important; /*updated*/
+  /*CTA button in product recommendation - hover */
+  color: $dark-border !important; /*updated*/
 }
 
 
@@ -678,7 +606,7 @@ display: none !important;
 /* questionnaire */
 
 /* width of the cards and checkboxes in tablet design */
-@media (min-width: 480px) and (max-width: 839px) {
+@media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
     & .sel-question--with-navigation .sel-card {
         width: 100% !important;
         margin-right: 0px !important;
@@ -692,7 +620,7 @@ display: none !important;
 }
 
 
-@media (max-width: 480px) {
+@media (max-width: $min-tablet-width) {
      & .sel-question--with-navigation .sel-card {
         width: 100% !important;
         margin-right: 0px !important;
@@ -704,39 +632,28 @@ display: none !important;
 
 
 /* result page tablet card width */
-@media (min-width: 480px) and (max-width: 839px) {
+@media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
     & result-page .mdc-layout-grid__cell {
         width: 100% !important;
-        /* width: calc(100% - 32px) !important;
-        margin-right: 16px !important;
-        margin-left: 16px !important; */
+        
     }
 }
 
-/* buttons min width */
-/* @media (min-width: 480px) and (max-width: 839px) {
-    & .mdc-button:not(:disabled), & .mdc-button--raised:not(:disabled), & .mdc-button--unelevated:not(:disabled) {
-        min-width: 150px !important;
-    }
-} */
 
-/* form page input fields width */
-@media (min-width: 480px) and (max-width: 839px) {
+
+
+@media (min-width: $min-tablet-width) and (max-width:$max-tablet-width ) {
+  /* form page input fields width */
     & .mdc-layout-grid__cell--span-4-tablet {
-        width: 100% !important;
-        grid-column-end: span 8 !important;
+      width: 100% !important;
+      grid-column-end: span 8 !important;
     }
 }
 
-/* @media (min-width: 480px) and (max-width: 839px) {  
-    .mdc-layout-grid__cell--span-2-tablet {
-        width: 100% !important;
-        grid-column-end: span 4 !important;
-    }
-} */
+
 
 /* restart, show result buttons on tablet */
-@media (min-width: 480px) and (max-width: 839px) {
+@media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
     &
         questionnaire-navigation.app-relative.mdc-layout-grid__cell.mdc-layout-grid__cell--span-0-phone.mdc-layout-grid__cell--span-2-tablet {
         width: auto !important;
@@ -745,7 +662,7 @@ display: none !important;
 }
 
 /* hide navigation menu on tablet */
-@media (min-width: 480px) and (max-width: 839px) {
+@media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
     &
         questionnaire-navigation.app-relative.mdc-layout-grid__cell.mdc-layout-grid__cell--span-0-phone.mdc-layout-grid__cell--span-2-tablet {
         display: none !important;
@@ -754,21 +671,16 @@ display: none !important;
 
 /* padding in grid for desktop */
 
-@media (min-width: 840px) {
+@media (min-width: $menu-desktop-width) {
     & .mdc-layout-grid__inner {
-        /*         display: flex !important;
-        flex-flow: row wrap !important;
-        align-items: stretch !important; */
-        /* padding-left: 24px !important; */
-        /* padding-right: 24px !important; */
-        padding-left: 0 !important;
+              padding-left: 0 !important;
     }
 }
 
 
 
 /* progress bar on tablet */
-@media (min-width: 480px) and (max-width: 839px) {
+@media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
     & .app-questionnaire-progress-bar {
         /* width: calc(100% + 48px) !important; */
         position: relative !important;
@@ -778,7 +690,7 @@ display: none !important;
 
 /* progress bar */
 
-@media (min-width: 480px) and (max-width: 839px) {
+@media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
     & .app-questionnaire-progress-bar__background {
         width: 100% !important;
         /* position: relative !important;
@@ -787,7 +699,7 @@ display: none !important;
 }
 
 /* attempt to make the restart and show result buttons to stand in the centre */
-@media (min-width: 480px) and (max-width: 839px) {
+@media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
     & .mdc-layout-grid__cell--span-3-tablet {
         width: auto !important;
         grid-column-end: span 3 !important;
@@ -796,7 +708,7 @@ display: none !important;
 
 /* changing the width of the header for tablet */
 
-@media (min-width: 480px) and (max-width: 839px) {
+@media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
     &
         header.sel-page-header.mdc-layout-grid__cell.mdc-layout-grid__cell--span-8-tablet.mdc-layout-grid__cell--span-12-desktop {
         width: 100% !important;
@@ -804,7 +716,7 @@ display: none !important;
 }
 
 /* fixing the width of the lines on tablet on form page */
-@media (min-width: 480px) and (max-width: 839px) {
+@media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
     & .mdc-layout-grid__cell--span-6,
     & .mdc-layout-grid__cell--span-6-tablet {
         width: 100% !important;
@@ -812,13 +724,13 @@ display: none !important;
     }
 }
 
-@media (max-width: 839px) {
+@media (max-width: $max-tablet-width) {
     & .sel-form-field.sel-form-field.sel-form-field {
         margin-right: 24px !important;
     }
 }
 
-@media (max-width: 839px) {
+@media (max-width: $max-tablet-width) {
     & .sel-text-field__input.sel-text-field__input.sel-text-field__input {
         width: calc(100% - 24px) !important;
         margin-right: 24px !important;
@@ -826,7 +738,7 @@ display: none !important;
 }
 
 
-@media  (max-width: 839px) {
+@media  (max-width: $max-tablet-width) {
     & .mdc-button:not(:disabled),
     & .mdc-button--raised:not(:disabled),
     & .mdc-button--unelevated:not(:disabled) {
@@ -838,7 +750,7 @@ display: none !important;
 
 /* Antworten 18 px statt 21, Beschreibung 14px statt 15) */
 
-@media (max-width: 480px) {
+@media (max-width: $min-tablet-width) {
     & .sel-image-button .app-grid-tile__title,
     & .sel-card__title {
         font-size: 18px !important;
@@ -913,7 +825,7 @@ display: none !important;
 
 
 
-@media (min-width: 480px) and (max-width: 839px) {
+@media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
     & .mdc-layout-grid {
     box-sizing: border-box !important;
     margin: 0 auto !important;

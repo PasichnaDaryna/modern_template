@@ -6,19 +6,15 @@ $white: #ffffff;
 $headline-color: #4c4c4c;
 $dark-border: #003e52; 
 $color-black: #000000; 
-
+$bg-blue: #0a6afcdc;
 $light-grey-color: #d3d3d3;
 $grey-color: #b2b2be;
 $grey-color-secondary: #575760; 
 $progress-bar-background: #e0e0e0;
 
-// $dark-border-secondary: rgba(0, 0, 0, 0.87); 
-// $dark-background-teriary: rgba(255, 255, 255, 0); // Variables for the project
-
-
-
-
-// @media min-width 768px;
-// (min-width: 480px) 
-// (max-width: 839px)
-// min-width: 840px
+$min-mobile-width: 0px; 
+$menu-mobile-width: 479px; 
+$min-tablet-width: 480px;
+$max-tablet-width: 839px; 
+$tablet-zwischen-width:  768px;
+$menu-desktop-width: 840px;
